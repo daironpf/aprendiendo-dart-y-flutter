@@ -2,14 +2,14 @@
 extension SetListAdvancedExtensions<T> on List<Set<T>> {
   // Método de extensión para verificar si algún conjunto está vacío
   bool algunConjuntoVacio() {
-    return this.any((conjunto) => conjunto.isEmpty);
+    return any((conjunto) => conjunto.isEmpty);
   }
 
   // Método de extensión para obtener la diferencia simétrica de todos los conjuntos en la lista
   Set<T> diferenciaSimetrica() {
-    if (this.isEmpty) return {};
-    Set<T> resultado = this.first;
-    for (var conjunto in this.skip(1)) {
+    if (isEmpty) return {};
+    Set<T> resultado = first;
+    for (var conjunto in skip(1)) {
       resultado = resultado
           .difference(conjunto)
           .union(conjunto.difference(resultado));

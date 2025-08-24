@@ -1,7 +1,7 @@
 // creame ahora el Encapsulamiento y getters/setters
 class CuentaBancaria {
   // Atributos privados
-  String _numeroCuenta;
+  final String _numeroCuenta;
   double _saldo;
 
   // Constructor
@@ -17,7 +17,7 @@ class CuentaBancaria {
   void depositar(double cantidad) {
     if (cantidad > 0) {
       _saldo += cantidad;
-      print('Depósito de \$${cantidad} realizado. Nuevo saldo: \$${_saldo}');
+      print('Depósito de \$$cantidad realizado. Nuevo saldo: \$$_saldo');
     } else {
       print('Cantidad inválida para depósito.');
     }
@@ -27,7 +27,7 @@ class CuentaBancaria {
   void retirar(double cantidad) {
     if (cantidad > 0 && cantidad <= _saldo) {
       _saldo -= cantidad;
-      print('Retiro de \$${cantidad} realizado. Nuevo saldo: \$${_saldo}');
+      print('Retiro de \$$cantidad realizado. Nuevo saldo: \$$_saldo');
     } else {
       print('Cantidad inválida para retiro o saldo insuficiente.');
     }

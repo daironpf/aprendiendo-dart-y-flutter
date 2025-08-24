@@ -2,7 +2,7 @@
 extension ListExtensions<T> on List<T> {
   // Método de extensión para obtener el segundo elemento de la lista
   T? segundoElemento() {
-    if (this.length >= 2) {
+    if (length >= 2) {
       return this[1];
     }
     return null; // Retorna null si no hay un segundo elemento
@@ -10,7 +10,7 @@ extension ListExtensions<T> on List<T> {
 
   // Método de extensión para obtener una lista sin duplicados
   List<T> sinDuplicados() {
-    return this.toSet().toList();
+    return toSet().toList();
   }
 }
 

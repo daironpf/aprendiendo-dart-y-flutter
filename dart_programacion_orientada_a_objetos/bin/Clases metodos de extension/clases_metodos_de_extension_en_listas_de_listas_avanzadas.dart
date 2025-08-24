@@ -2,8 +2,8 @@
 extension ListOfListAdvancedExtensions<T> on List<List<T>> {
   // Método de extensión para transponer una lista de listas (matriz)
   List<List<T>> transponer() {
-    if (this.isEmpty) return [];
-    int filas = this.length;
+    if (isEmpty) return [];
+    int filas = length;
     int columnas = this[0].length;
     List<List<T>> transpuesta = List.generate(
       columnas,
@@ -19,8 +19,7 @@ extension ListOfListAdvancedExtensions<T> on List<List<T>> {
 
   // Método de extensión para obtener la suma de cada sublista
   List<num> sumaDeSublistas() {
-    return this
-        .map((sublist) => sublist.whereType<num>().fold(0, (a, b) => a + b))
+    return map((sublist) => sublist.whereType<num>().fold(0, (a, b) => a + b))
         .toList();
   }
 }

@@ -2,15 +2,14 @@
 extension StringExtensionsAdvanced on String {
   // Método de extensión para verificar si una cadena es un palíndromo
   bool esPalindromo() {
-    String textoLimpio = this.replaceAll(RegExp(r'\W'), '').toLowerCase();
+    String textoLimpio = replaceAll(RegExp(r'\W'), '').toLowerCase();
     String textoInvertido = textoLimpio.split('').reversed.join();
     return textoLimpio == textoInvertido;
   }
 
   // Método de extensión para contar la cantidad de vocales en una cadena
   int contarVocales() {
-    return this
-        .toLowerCase()
+    return toLowerCase()
         .split('')
         .where((char) => 'aeiou'.contains(char))
         .length;

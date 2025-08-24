@@ -2,12 +2,12 @@
 extension StringExtensions on String {
   // Método de extensión para contar palabras en una cadena
   int contarPalabras() {
-    return this.split(' ').length;
+    return split(' ').length;
   }
 
   // Método de extensión para invertir una cadena
   String invertir() {
-    return this.split('').reversed.join();
+    return split('').reversed.join();
   }
 }
 

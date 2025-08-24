@@ -2,12 +2,12 @@
 extension DateTimeExtensions on DateTime {
   // Método de extensión para verificar si una fecha es fin de semana
   bool esFinDeSemana() {
-    return this.weekday == DateTime.saturday || this.weekday == DateTime.sunday;
+    return weekday == DateTime.saturday || weekday == DateTime.sunday;
   }
 
   // Método de extensión para formatear la fecha como cadena
   String formatear() {
-    return '${this.day}/${this.month}/${this.year}';
+    return '${day}/${month}/${year}';
   }
 }
 

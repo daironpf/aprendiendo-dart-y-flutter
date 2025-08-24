@@ -2,12 +2,12 @@
 extension BoolListAdvancedExtensions on List<bool> {
   // Método de extensión para verificar si al menos un valor es verdadero
   bool alMenosUnVerdadero() {
-    return this.any((b) => b);
+    return any((b) => b);
   }
 
   // Método de extensión para verificar si al menos un valor es falso
   bool alMenosUnFalso() {
-    return this.any((b) => !b);
+    return any((b) => !b);
   }
 }
 

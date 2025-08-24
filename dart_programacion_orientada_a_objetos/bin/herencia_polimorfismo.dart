@@ -16,7 +16,7 @@ class Perro extends Animal {
   // Atributo adicional de la clase derivada
   String raza;
   // Constructor de la clase derivada
-  Perro(String nombre, int edad, this.raza) : super(nombre, edad);
+  Perro(super.nombre, super.edad, this.raza);
   // Sobrescribir el método de la clase base
   @override
   void hacerSonido() {
@@ -28,7 +28,7 @@ class Gato extends Animal {
   // Atributo adicional de la clase derivada
   String color;
   // Constructor de la clase derivada
-  Gato(String nombre, int edad, this.color) : super(nombre, edad);
+  Gato(super.nombre, super.edad, this.color);
   // Sobrescribir el método de la clase base
   @override
   void hacerSonido() {

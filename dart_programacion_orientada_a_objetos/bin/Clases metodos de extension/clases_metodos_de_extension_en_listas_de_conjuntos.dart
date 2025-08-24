@@ -2,13 +2,13 @@
 extension SetListExtensions<T> on List<Set<T>> {
   // Método de extensión para obtener la unión de todos los conjuntos en la lista
   Set<T> union() {
-    return this.expand((conjunto) => conjunto).toSet();
+    return expand((conjunto) => conjunto).toSet();
   }
 
   // Método de extensión para obtener la intersección de todos los conjuntos en la lista
   Set<T> interseccion() {
-    if (this.isEmpty) return {};
-    return this.reduce((a, b) => a.intersection(b));
+    if (isEmpty) return {};
+    return reduce((a, b) => a.intersection(b));
   }
 }
 

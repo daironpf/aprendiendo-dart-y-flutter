@@ -2,14 +2,14 @@
 extension DateTimeListExtensions on List<DateTime> {
   // Método de extensión para obtener la fecha más reciente en la lista
   DateTime? fechaMasReciente() {
-    if (this.isEmpty) return null;
-    return this.reduce((a, b) => a.isAfter(b) ? a : b);
+    if (isEmpty) return null;
+    return reduce((a, b) => a.isAfter(b) ? a : b);
   }
 
   // Método de extensión para obtener la fecha más antigua en la lista
   DateTime? fechaMasAntigua() {
-    if (this.isEmpty) return null;
-    return this.reduce((a, b) => a.isBefore(b) ? a : b);
+    if (isEmpty) return null;
+    return reduce((a, b) => a.isBefore(b) ? a : b);
   }
 }
 

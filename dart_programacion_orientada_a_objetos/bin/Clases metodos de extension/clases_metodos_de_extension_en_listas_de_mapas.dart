@@ -11,7 +11,7 @@ extension MapListExtensions<K, V> on List<Map<K, V>> {
 
   // Método de extensión para obtener todas las claves únicas en la lista de mapas
   Set<K> clavesUnicas() {
-    return this.expand((mapa) => mapa.keys).toSet();
+    return expand((mapa) => mapa.keys).toSet();
   }
 }
 

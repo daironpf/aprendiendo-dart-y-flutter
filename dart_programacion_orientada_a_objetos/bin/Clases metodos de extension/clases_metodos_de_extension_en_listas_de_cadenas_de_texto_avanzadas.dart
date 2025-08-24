@@ -2,7 +2,7 @@
 extension StringListMoreExtensions on List<String> {
   // Método de extensión para encontrar todas las cadenas que son palíndromos
   List<String> encontrarPalindromos() {
-    return this.where((str) {
+    return where((str) {
       String textoLimpio = str.replaceAll(RegExp(r'\W'), '').toLowerCase();
       String textoInvertido = textoLimpio.split('').reversed.join();
       return textoLimpio == textoInvertido;

@@ -2,12 +2,12 @@
 extension MapListAdvancedExtensions<K, V> on List<Map<K, V>> {
   // Método de extensión para filtrar mapas que contienen una clave específica
   List<Map<K, V>> filtrarPorClave(K clave) {
-    return this.where((mapa) => mapa.containsKey(clave)).toList();
+    return where((mapa) => mapa.containsKey(clave)).toList();
   }
 
   // Método de extensión para obtener una lista de todos los valores asociados a una clave específica
   List<V?> valoresPorClave(K clave) {
-    return this.map((mapa) => mapa[clave]).toList();
+    return map((mapa) => mapa[clave]).toList();
   }
 }
 

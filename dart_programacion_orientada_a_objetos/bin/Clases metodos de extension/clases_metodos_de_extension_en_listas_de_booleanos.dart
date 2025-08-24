@@ -2,12 +2,12 @@
 extension BoolListExtensions on List<bool> {
   // Método de extensión para contar cuántos valores son verdaderos en la lista
   int contarVerdaderos() {
-    return this.where((b) => b).length;
+    return where((b) => b).length;
   }
 
   // Método de extensión para verificar si todos los valores son verdaderos
   bool todosVerdaderos() {
-    return this.every((b) => b);
+    return every((b) => b);
   }
 }
 

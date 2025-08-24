@@ -2,13 +2,13 @@
 extension StringListAdvancedExtensions on List<String> {
   // Método de extensión para encontrar la cadena más larga en la lista
   String? cadenaMasLarga() {
-    if (this.isEmpty) return null;
-    return this.reduce((a, b) => a.length >= b.length ? a : b);
+    if (isEmpty) return null;
+    return reduce((a, b) => a.length >= b.length ? a : b);
   }
 
   // Método de extensión para convertir todas las cadenas a mayúsculas
   List<String> aMayusculas() {
-    return this.map((str) => str.toUpperCase()).toList();
+    return map((str) => str.toUpperCase()).toList();
   }
 }
 

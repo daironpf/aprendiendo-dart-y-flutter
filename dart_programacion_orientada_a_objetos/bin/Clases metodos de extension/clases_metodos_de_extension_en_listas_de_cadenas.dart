@@ -2,12 +2,12 @@
 extension StringListExtensions on List<String> {
   // Método de extensión para concatenar todas las cadenas en la lista
   String concatenar(String separador) {
-    return this.join(separador);
+    return join(separador);
   }
 
   // Método de extensión para filtrar cadenas que contienen una subcadena específica
   List<String> filtrarPorSubcadena(String subcadena) {
-    return this.where((str) => str.contains(subcadena)).toList();
+    return where((str) => str.contains(subcadena)).toList();
   }
 }
 

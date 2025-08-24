@@ -2,12 +2,12 @@
 extension MapExtensions<K, V> on Map<K, V> {
   // Método de extensión para obtener las claves como una lista
   List<K> clavesComoLista() {
-    return this.keys.toList();
+    return keys.toList();
   }
 
   // Método de extensión para obtener los valores como una lista
   List<V> valoresComoLista() {
-    return this.values.toList();
+    return values.toList();
   }
 }
 

@@ -2,12 +2,12 @@
 extension SetExtensions<T> on Set<T> {
   // Método de extensión para verificar si un conjunto es subconjunto de otro
   bool esSubconjuntoDe(Set<T> otro) {
-    return this.every((element) => otro.contains(element));
+    return every((element) => otro.contains(element));
   }
 
   // Método de extensión para obtener la intersección de dos conjuntos
   Set<T> interseccion(Set<T> otro) {
-    return this.where((element) => otro.contains(element)).toSet();
+    return where((element) => otro.contains(element)).toSet();
   }
 }
 

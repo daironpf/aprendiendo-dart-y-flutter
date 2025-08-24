@@ -2,14 +2,14 @@
 extension NumListAdvancedExtensions on List<num> {
   // Método de extensión para encontrar el número máximo en la lista
   num? numeroMaximo() {
-    if (this.isEmpty) return null;
-    return this.reduce((a, b) => a >= b ? a : b);
+    if (isEmpty) return null;
+    return reduce((a, b) => a >= b ? a : b);
   }
 
   // Método de extensión para encontrar el número mínimo en la lista
   num? numeroMinimo() {
-    if (this.isEmpty) return null;
-    return this.reduce((a, b) => a <= b ? a : b);
+    if (isEmpty) return null;
+    return reduce((a, b) => a <= b ? a : b);
   }
 }
 

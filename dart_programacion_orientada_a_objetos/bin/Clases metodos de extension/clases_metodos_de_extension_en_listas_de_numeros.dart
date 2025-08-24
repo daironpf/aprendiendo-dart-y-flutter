@@ -2,13 +2,13 @@
 extension NumListExtensions on List<num> {
   // Método de extensión para calcular la suma de todos los números en la lista
   num sumar() {
-    return this.reduce((a, b) => a + b);
+    return reduce((a, b) => a + b);
   }
 
   // Método de extensión para calcular el promedio de los números en la lista
   double promedio() {
-    if (this.isEmpty) return 0;
-    return this.sumar() / this.length;
+    if (isEmpty) return 0;
+    return sumar() / length;
   }
 }
 
