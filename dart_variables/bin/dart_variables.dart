@@ -18,11 +18,7 @@ void main(List<String> arguments) {
   */
   print("\n==Null Safety in Dart==");
   String? nullableString;
-  if (nullableString == null) {
-    print('The string is null');
-  } else {
-    print('The string is: $nullableString');
-  }
+  print('The string is null');
 
   //Operadores con nullables
   print("\n==Operators with Nullables==");
