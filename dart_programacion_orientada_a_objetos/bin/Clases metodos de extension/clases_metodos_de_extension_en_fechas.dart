@@ -7,7 +7,7 @@ extension DateTimeExtensions on DateTime {
 
   // Método de extensión para formatear la fecha como cadena
   String formatear() {
-    return '${day}/${month}/${year}';
+    return '$day/$month/$year';
   }
 }
 
