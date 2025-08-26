@@ -10,7 +10,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: const RootPage());
+    return MaterialApp(
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: const RootPage(),
+    );
   }
 }
 
@@ -27,8 +30,14 @@ class _RootPageState extends State<RootPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Mi primera aplicacion')),
-      body: const Center(child: Text('Hola Mundo')),
+      appBar: AppBar(title: const Text('SocialSeed')),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {
+          debugPrint("Click desde Flutter");
+        },
+      ),
+      // body: const Center(child: Text('Hola Mundoss')),
     );
   }
 }

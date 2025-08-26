@@ -66,3 +66,12 @@ Tú solo lo **usas** cuando quieres acceder a información o pasarlo a otros wid
 
 ---
 
+Los nombres de argumentos comienzan con letras minusculas y el de los widgets en mayusculas:
+Ejemplo:
+```
+return Scaffold(
+      appBar: AppBar(title: const Text('Mi primera aplicacion')),
+      body: const Center(child: Text('Hola Mundo')),
+    );
+```
+
