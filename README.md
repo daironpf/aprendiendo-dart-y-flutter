@@ -1,40 +1,68 @@
-# 📒 Mis notas de aprendizaje en Dart y Flutter
+## 🔹 ¿Qué es `BuildContext`?
 
-Este repositorio contiene mis **apuntes personales** y ejemplos prácticos creados durante mi proceso de aprendizaje de **Dart** y **Flutter**.  
-No es un proyecto final ni una aplicación completa, sino un espacio donde voy guardando todo lo que estudio, pruebo y experimento.
+* Es **un objeto que Flutter crea automáticamente** cuando construye el árbol de widgets.
+* Representa **la ubicación de un widget en el árbol de widgets**.
+* Gracias a él, un widget puede acceder a información de su entorno, por ejemplo:
 
----
+  * El **tema** (Theme.of(context))
+  * La **navegación** (Navigator.of(context))
+  * El tamaño de la pantalla (MediaQuery.of(context))
+  * Widgets “padres” que lo rodean.
 
-## 🎯 Objetivo
-- Documentar mi progreso en Dart y Flutter.
-- Practicar conceptos clave del lenguaje Dart.
-- Explorar el desarrollo de interfaces móviles con Flutter.
-- Tener un repositorio de referencia para repasar en el futuro.
-
----
-
-## 📂 Contenido
-- **Notas teóricas** sobre Dart y Flutter.
-- **Ejemplos de código** con casos básicos y avanzados.
-- **Ejercicios prácticos** que voy resolviendo durante mi estudio.
+👉 Entonces, **no lo creamos manualmente**. Flutter lo genera y lo pasa como parámetro a métodos como `build`.
 
 ---
 
-## 🛠 Tecnologías
-- [Dart](https://dart.dev/) – Lenguaje de programación.
-- [Flutter](https://flutter.dev/) – Framework para desarrollo móvil multiplataforma.
+## 🔹 ¿Dónde aparece?
+
+Cada vez que declaramos un `build`, Flutter lo escribe así:
+
+```dart
+@override
+Widget build(BuildContext context) {
+  // aquí tienes acceso al árbol de widgets
+}
+```
+
+Ese `context` **ya existe** porque Flutter lo creó.
+Tú solo lo **usas** cuando quieres acceder a información o pasarlo a otros widgets/métodos.
 
 ---
 
-## 📌 Estado
-Este repositorio está en constante crecimiento a medida que avanzo en el aprendizaje.  
-No esperes encontrar una app finalizada, sino más bien un cuaderno digital de estudio.
+## 🔹 ¿Para qué se pasa como parámetro?
+
+1. **Acceder a recursos globales o padres**
+
+   ```dart
+   final theme = Theme.of(context); // obtiene colores, tipografía, etc.
+   final size = MediaQuery.of(context).size; // tamaño de pantalla
+   ```
+
+2. **Navegar entre pantallas**
+
+   ```dart
+   Navigator.of(context).push(
+     MaterialPageRoute(builder: (context) => SecondPage()),
+   );
+   ```
+
+3. **Mostrar diálogos/snackbars**
+
+   ```dart
+   ScaffoldMessenger.of(context).showSnackBar(
+     SnackBar(content: Text("Hola desde Flutter!")),
+   );
+   ```
 
 ---
 
-## 🙌 Contribuciones
-Este es un proyecto personal, pero si tienes sugerencias, consejos o quieres compartir recursos de aprendizaje, ¡son bienvenidos!
+---
+
+✅ **Resumen rápido**:
+
+* **No “armas” un `BuildContext` tú mismo**, Flutter lo provee.
+* Se pasa como parámetro para poder interactuar con el **árbol de widgets**: acceder a padres, navegación, temas, tamaños, etc.
+* Es la forma en que un widget “sabe dónde está” dentro de la app.
 
 ---
 
-✍️ _Creado como parte de mi camino de aprendizaje en programación móvil._
