@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/pagina1.dart';
+import 'package:flutter_application_1/pages/pagina2.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -10,33 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Imagenes",
-      home: Scaffold(
-        appBar: AppBar(title: Text("Mostrar imagenes")),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              SizedBox(
-                height: 250.0,
-                width: 550.0,
-                child: Image.asset(
-                  "elpandacreador_profile.jpg",
-                  fit: BoxFit.fitHeight,
-                ),
-              ),
-              SizedBox(
-                height: 250.0,
-                width: 550.0,
-                child: Image.network(
-                  "https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG",
-                  fit: BoxFit.fitWidth,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
+      title: "Navegacion",
+      initialRoute: "pagina1",
+      routes: {
+        "pagina1": (BuildContext context) => const Pagina1(),
+        "pagina2": (BuildContext context) => const Pagina2(),
+      },
     );
   }
 }
