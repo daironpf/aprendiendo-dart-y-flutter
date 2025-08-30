@@ -10,6 +10,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(title: "Container Widget", home: Containerpage());
+    return const MaterialApp(
+      debugShowCheckedModeBanner:
+          false, //quita la lista que dice que esta en debug
+      title: "Container Widget",
+      home: Containerpage(),
+    );
   }
 }
