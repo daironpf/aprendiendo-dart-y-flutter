@@ -1,3 +1,5 @@
+# Para esta carpeta de estudio, lo estudié todo de este tutorial en youtube: https://youtu.be/IRLLVmN7nQI
+
 ## 🔹 ¿Qué es `BuildContext`?
 
 * Es **un objeto que Flutter crea automáticamente** cuando construye el árbol de widgets.
