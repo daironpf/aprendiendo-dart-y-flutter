@@ -11,8 +11,18 @@ class Containerpage extends StatelessWidget {
         child: Container(
           width: 200.0,
           height: 200.0,
-          color: Colors.amber,
-          alignment: Alignment.topLeft, //alinea los widgets child
+          alignment: Alignment.center, //alinea los widgets child
+          decoration: const BoxDecoration(
+            color: Colors.amber,
+            borderRadius: BorderRadius.all(Radius.circular(20.0)),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black26,
+                offset: Offset(2.0, 2.0),
+                blurRadius: 4.0,
+              ),
+            ],
+          ),
           child: Text("Hola"),
         ),
       ),
