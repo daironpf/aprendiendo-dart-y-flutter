@@ -15,7 +15,9 @@ class Containerpage extends StatelessWidget {
           alignment: Alignment.center, //alinea los widgets child
           decoration: const BoxDecoration(
             color: Colors.amber,
-            borderRadius: BorderRadius.all(Radius.circular(100.0)),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30.0),
+            ), // con only tanto en padding como en radius especificamos donde queremos la modificacion
             boxShadow: [
               BoxShadow(
                 color: Colors.black26,
