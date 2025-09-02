@@ -9,12 +9,13 @@ class Containerpage extends StatelessWidget {
       style: TextStyle(fontSize: 30.0),
       child: Center(
         child: Container(
+          // al tener el alto y ancho iguales es un cuadrado y al aumentar el borderRadius a la mitad del ancho o alto se vuelve un circulo
           width: 200.0,
           height: 200.0,
           alignment: Alignment.center, //alinea los widgets child
           decoration: const BoxDecoration(
             color: Colors.amber,
-            borderRadius: BorderRadius.all(Radius.circular(20.0)),
+            borderRadius: BorderRadius.all(Radius.circular(100.0)),
             boxShadow: [
               BoxShadow(
                 color: Colors.black26,
