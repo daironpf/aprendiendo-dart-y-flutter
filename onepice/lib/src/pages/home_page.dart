@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onepice/src/widgets/header_widget.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -10,6 +11,9 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: Color.fromARGB(255, 16, 16, 16),
+      body: Column(children: const <Widget>[HeaderWidget()]),
+    );
   }
 }
