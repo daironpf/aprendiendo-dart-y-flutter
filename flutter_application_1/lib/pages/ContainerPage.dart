@@ -17,6 +17,7 @@ class Containerpage extends StatelessWidget {
             color: Colors.amber,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(30.0),
+              topRight: Radius.circular(20.0),
             ), // con only tanto en padding como en radius especificamos donde queremos la modificacion
             boxShadow: [
               BoxShadow(
