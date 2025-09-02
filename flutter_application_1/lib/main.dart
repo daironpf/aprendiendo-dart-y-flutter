@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/ContainerPage.dart';
+import 'package:flutter_application_1/pages/ListView.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner:
           false, //quita la lista que dice que esta en debug
-      title: "Container Widget",
-      home: Containerpage(),
+      title: "ListView",
+      home: ListviewPage(),
     );
   }
 }
