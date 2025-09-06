@@ -8,8 +8,14 @@ class ListaPersonajesWidget extends StatefulWidget {
 }
 
 class _ListaPersonajesWidgetState extends State<ListaPersonajesWidget> {
+  final tituloStyleText = const TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+  );
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return ListView(children: [Text("Portadas", style: tituloStyleText)]);
   }
 }
