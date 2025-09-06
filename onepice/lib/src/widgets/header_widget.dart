@@ -40,6 +40,23 @@ class HeaderWidget extends StatelessWidget {
                   onPressed: () {},
                 ),
               ),
+
+              const SizedBox(width: 10.0), // sirve de separador
+
+              Container(
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 73, 66, 66),
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: IconButton(
+                  icon: const Icon(
+                    Icons.notifications,
+                    size: 28,
+                    color: Colors.white,
+                  ),
+                  onPressed: () {},
+                ),
+              ),
             ],
           ),
         ],
