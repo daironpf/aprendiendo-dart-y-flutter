@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class HeaderWidget extends StatelessWidget {
   const HeaderWidget({super.key});
-  final String title = "One Piece";
   final tituloTextStyle = const TextStyle(
     color: Colors.white,
     fontSize: 26.0,
@@ -24,7 +23,7 @@ class HeaderWidget extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(title, style: tituloTextStyle),
+              Text("One Piece", style: tituloTextStyle),
               Text("Series", style: subtitleStyle),
             ],
           ),
